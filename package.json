@@ -72,5 +72,9 @@
     "@types/react-query": "^1.2.9",
     "@types/styled-components": "^5.1.26"
   },
-  "description": "An Ionic project"
+  "description": "An Ionic project",
+  "engines": {
+    "node": ">=14.0.0",
+    "npm": "~6.0.0"
+  }
 }
