@@ -1,24 +1,24 @@
-import React, { InputHTMLAttributes, ReactNode } from "react";
+import React, { InputHTMLAttributes } from "react";
 import styled from "styled-components";
 
-interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+interface Props extends InputHTMLAttributes<HTMLInputElement> {
   name: string;
   disabled?: boolean;
   value?: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Elem = styled.input`
+const Input = styled.input`
   width: 100%;
   border-radius: 6px;
   padding: 6px 10px;
   background-color: transparent;
 `;
 
-const elem: React.FC<InputProps> = ({ name, value, disabled, onChange }) => {
+const Elem: React.FC<Props> = ({ name, value, disabled, onChange }) => {
   return (
-    <Elem name={name} value={value} disabled={disabled} onChange={onChange} />
+    <Input name={name} value={value} disabled={disabled} onChange={onChange} />
   );
 };
 
-export default elem;
+export default Elem;

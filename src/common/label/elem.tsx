@@ -1,13 +1,13 @@
 import React, { InputHTMLAttributes, ReactNode } from "react";
 import styled from "styled-components";
 
-interface LabelProps extends InputHTMLAttributes<HTMLLabelElement> {
+interface Props extends InputHTMLAttributes<HTMLLabelElement> {
   htmlFor: string;
   children: ReactNode;
   size?: number;
 }
 
-const Elem = styled.label<{ size?: number }>`
+const Label = styled.label<{ size?: number }>`
   position: absolute;
   top: -20px;
   left: 0;
@@ -17,12 +17,12 @@ const Elem = styled.label<{ size?: number }>`
   color: #949494;
 `;
 
-const elem: React.FC<LabelProps> = ({ children, size, htmlFor }) => {
+const Elem: React.FC<Props> = ({ children, size, htmlFor }) => {
   return (
-    <Elem size={size} htmlFor={htmlFor}>
+    <Label size={size} htmlFor={htmlFor}>
       {children}
-    </Elem>
+    </Label>
   );
 };
 
-export default elem;
+export default Elem;

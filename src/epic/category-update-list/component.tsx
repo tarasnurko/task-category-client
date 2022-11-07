@@ -5,13 +5,18 @@ import { CATEGORY_LIST } from "../../data/category";
 
 const Component: React.FC<{
   list: CATEGORY_LIST;
-  onDelete: (id: number) => void;
-}> = ({ list, onDelete }) => {
+  activeCategory: number | null;
+  onActive: (id: number) => void;
+}> = ({ list, activeCategory, onActive }) => {
   return (
     <ContainerHorizontal>
       {list.map((category) => (
-        <CategoryItem key={category.id} onClick={() => onDelete(category.id)}>
-          {category.text} ✗
+        <CategoryItem
+          key={category.id}
+          active={activeCategory === category.id ? true : false}
+          onClick={() => onActive(category.id)}
+        >
+          {category.text}
         </CategoryItem>
       ))}
     </ContainerHorizontal>

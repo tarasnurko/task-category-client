@@ -20,7 +20,7 @@ import "@ionic/react/css/display.css";
 import { ProjectListPage } from "./page/project-list";
 import { ProjectDataPage } from "./page/project-data";
 import { ProjectCreatePage } from "./page/project-create";
-import { ProjectEditPage } from "./page/project-edit";
+import { ProjectUpdatePage } from "./page/project-update";
 
 setupIonicReact();
 
@@ -37,7 +37,7 @@ const App: React.FC = () => (
         </Route>
 
         <Route exact path="/projects/:projectId/edit">
-          <ProjectEditPage />
+          <ProjectUpdatePage />
         </Route>
 
         <Route exact path="/create">

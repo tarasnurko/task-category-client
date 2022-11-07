@@ -8,7 +8,8 @@ import { Title } from "../../common/title";
 
 const Container = styled.div`
   padding: 5px;
-  border: 1px solid #571b78;
+  background-color: #f6f6f6;
+  box-shadow: 2px 2px 5px 0px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
 `;
 

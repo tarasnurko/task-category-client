@@ -41,7 +41,7 @@ const Component: React.FC = () => {
             <CategoryList list={data.categories} />
           )}
           <LinkWrapper to={`/projects/${projectId}/edit`}>
-            <Button btnType={BUTTON_TYPE.EDIT}>Edit</Button>
+            <Button btnType={BUTTON_TYPE.UPDATE}>Update</Button>
           </LinkWrapper>
         </React.Fragment>
       )}

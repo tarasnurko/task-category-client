@@ -1,13 +1,13 @@
 import React, { ReactNode } from "react";
 import styled from "styled-components";
 
-const Elem = styled.p`
+const ErrorText = styled.p`
   margin: 0;
   color: #cf2a2a;
 `;
 
-const elem: React.FC<{ children: ReactNode }> = ({ children }) => {
-  return <Elem>{children}</Elem>;
+const Elem: React.FC<{ children: ReactNode }> = ({ children }) => {
+  return <ErrorText>{children}</ErrorText>;
 };
 
-export default elem;
+export default Elem;

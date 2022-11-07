@@ -5,7 +5,7 @@ import { BUTTON_TYPE } from "./constants";
 const btnBgColor = (btnType: BUTTON_TYPE): string =>
   btnType === BUTTON_TYPE.CREATE
     ? "#0071aa"
-    : btnType === BUTTON_TYPE.EDIT
+    : btnType === BUTTON_TYPE.UPDATE
     ? "#e2d706"
     : btnType === BUTTON_TYPE.SAVE
     ? "#83e930"
@@ -16,7 +16,7 @@ const btnBgColor = (btnType: BUTTON_TYPE): string =>
 const btnTextColor = (btnType: BUTTON_TYPE): string =>
   btnType === BUTTON_TYPE.CREATE
     ? "#ffffff"
-    : btnType === BUTTON_TYPE.EDIT
+    : btnType === BUTTON_TYPE.UPDATE
     ? "#000000"
     : btnType === BUTTON_TYPE.SAVE
     ? "#000000"
@@ -24,7 +24,7 @@ const btnTextColor = (btnType: BUTTON_TYPE): string =>
     ? "#ffffff"
     : "unset";
 
-const Elem = styled.button<{ btnType: BUTTON_TYPE }>`
+const Button = styled.button<{ btnType: BUTTON_TYPE }>`
   margin: 0;
   padding: 10px 18px;
   background-color: ${(props) => btnBgColor(props.btnType)};
@@ -33,17 +33,19 @@ const Elem = styled.button<{ btnType: BUTTON_TYPE }>`
   border-radius: 6px;
 `;
 
-const elem: React.FC<{
+interface Props {
   children?: ReactNode;
   btnType: BUTTON_TYPE;
   onClick?: () => void;
   disabled?: boolean;
-}> = ({ children, btnType, onClick, disabled }) => {
+}
+
+const Elem: React.FC<Props> = ({ children, btnType, onClick, disabled }) => {
   return (
-    <Elem btnType={btnType} onClick={onClick} disabled={disabled}>
+    <Button btnType={btnType} onClick={onClick} disabled={disabled}>
       {children}
-    </Elem>
+    </Button>
   );
 };
 
-export default elem;
+export default Elem;

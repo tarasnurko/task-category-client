@@ -1,7 +1,7 @@
 import React, { ReactNode } from "react";
 import { Link } from "react-router-dom";
 
-const elem: React.FC<{ children: ReactNode; to: string }> = ({
+const Elem: React.FC<{ children: ReactNode; to: string }> = ({
   children,
   to,
 }) => {
@@ -12,4 +12,4 @@ const elem: React.FC<{ children: ReactNode; to: string }> = ({
   );
 };
 
-export default elem;
+export default Elem;

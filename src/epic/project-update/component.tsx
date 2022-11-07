@@ -20,7 +20,7 @@ import {
   deleteProejctAction,
 } from "./actions";
 
-import { IGetProjectData, IUpdateProject, IDeleteProject } from "./constants";
+import { IUpdateProject, IDeleteProject } from "./constants";
 
 const Component: React.FunctionComponent = () => {
   const [values, setValues] = useState<PROJECT_CREATE>({
@@ -108,7 +108,7 @@ const Component: React.FunctionComponent = () => {
       />
       <ContainerVertical>
         <Button
-          btnType={BUTTON_TYPE.EDIT}
+          btnType={BUTTON_TYPE.UPDATE}
           onClick={handleUpdate}
           disabled={isLoading}
         >
